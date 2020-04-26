@@ -1,0 +1,570 @@
+body {
+  margin: 0;
+  color: #2b2b2b;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 100%;
+}
+
+a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.inner {
+  margin: auto;
+  max-width: 960px;
+}
+
+@media (max-width: 675px) {
+  .inner {
+    margin: 0 4%;
+  }
+}
+
+.section-title {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  margin: 24px auto 32px;
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #333;
+}
+
+.section-lead {
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 675px) {
+  .section-lead {
+    padding: 0 4%;
+    font-size: 0.9em;
+  }
+}
+
+.main {
+  width: 100%;
+  height: 620px;
+  background: url(images/header.png) no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 675px) {
+  .main {
+    height: 100vh;
+  }
+}
+
+.main-menu {
+  position: relative;
+  top: 40px;
+  margin: auto;
+  max-width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 675px) {
+  .main-menu {
+    padding: 0 4%;
+  }
+}
+
+.main-menu__logo {
+  color: #fff;
+  font-size: 36px;
+}
+
+.main-menu__button span {
+  margin-bottom: 9px;
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.main-menu__button span:last-child {
+  border-bottom: 0;
+}
+
+.inview .main-menu__button span {
+  position: fixed;
+  right: 4%;
+  z-index: 2;
+}
+
+.inview .main-menu__button span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 24px -4px;
+          transform-origin: 24px -4px;
+}
+
+.inview .main-menu__button span:nth-child(2) {
+  opacity: 0;
+}
+
+.inview .main-menu__button span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 7px -1px;
+          transform-origin: 7px -1px;
+}
+
+.main-menu__mask {
+  display: none;
+}
+
+.inview .main-menu__mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.main-menu__list {
+  display: none;
+}
+
+.inview .main-menu__list {
+  padding: 30px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  background: #fff;
+  z-index: 2;
+}
+
+.main-menu__item {
+  line-height: 2em;
+}
+
+.main-menu__item a::before {
+  margin-right: 1em;
+  font-family: "Font Awesome 5 Free";
+  content: "\f054";
+  font-weight: bold;
+}
+
+.main-menu__btn {
+  display: none;
+}
+
+.inview .main-menu__btn {
+  margin: 20px auto 0;
+  display: block;
+  width: 200px;
+  height: 40px;
+  border: 1px solid #a0a0a0;
+}
+
+.inview .main-menu__btn a {
+  display: block;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 40px;
+}
+
+.main-title {
+  position: relative;
+  top: 40%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+  font-size: 120px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main-title__sub {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.main-title__sub::before {
+  content: '';
+  margin: 0 8px 5px 0;
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background: #fff;
+}
+
+.main-title__sub::after {
+  content: '';
+  margin: 0 0 5px 8px;
+  display: inline-block;
+  width: 12px;
+  height: 2px;
+  background: #fff;
+}
+
+.concept {
+  padding: 80px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(70%, #fff), color-stop(70%, #ededed), to(#ededed));
+  background: linear-gradient(to bottom, #fff 0%, #fff 70%, #ededed 70%, #ededed 100%);
+}
+
+.concept__image {
+  margin-top: 40px;
+  height: 400px;
+  background: url(images/concept.png) no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 675px) {
+  .concept__image {
+    background-position: center center;
+  }
+}
+
+.work {
+  padding: 80px 0;
+}
+
+.work-block {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 675px) {
+  .work-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.work-block__right, .work-block__left {
+  width: 420px;
+}
+
+@media (max-width: 675px) {
+  .work-block__right, .work-block__left {
+    width: 100%;
+  }
+}
+
+.work-box:last-child {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 675px) {
+  .work-box:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.work-box__image {
+  margin-bottom: 16px;
+  padding-top: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 675px) {
+  .work-box__image {
+    padding-top: 60%;
+    background-position: center;
+  }
+}
+
+.gift .work-box__image {
+  background-image: url(images/work_gift.png);
+}
+
+.wedding .work-box__image {
+  margin-top: 80px;
+  background-image: url(images/work_wedding.png);
+}
+
+@media (max-width: 675px) {
+  .wedding .work-box__image {
+    margin-top: 40px;
+  }
+}
+
+.decoration .work-box__image {
+  margin-top: 120px;
+  background-image: url(images/work_decoretion.png);
+}
+
+@media (max-width: 675px) {
+  .decoration .work-box__image {
+    margin-top: 40px;
+  }
+}
+
+.yourself .work-box__image {
+  margin-top: 80px;
+  background-image: url(images/work_for_yourself.png);
+}
+
+@media (max-width: 675px) {
+  .yourself .work-box__image {
+    margin-top: 40px;
+  }
+}
+
+.work-box__title {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+.work-box__text {
+  line-height: 1.75;
+}
+
+@media (max-width: 675px) {
+  .work-box__text {
+    font-size: 0.9em;
+  }
+}
+
+.florist {
+  padding: 80px 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fff), color-stop(47%, #fff), color-stop(47%, #ededed), to(#ededed));
+  background: linear-gradient(to top, #fff 0%, #fff 47%, #ededed 47%, #ededed 100%);
+}
+
+@media (max-width: 675px) {
+  .florist {
+    padding-bottom: 0;
+  }
+}
+
+.florist .inner {
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 675px) {
+  .florist .inner {
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.florist-box {
+  width: calc((100% - 60px) / 3);
+}
+
+@media (max-width: 675px) {
+  .florist-box {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+.florist-box__image {
+  margin-bottom: 12px;
+  padding-top: 60%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.shiyu .florist-box__image {
+  background-image: url(images/florist_shiyu.png);
+}
+
+.mao .florist-box__image {
+  background-image: url(images/florist_mao.png);
+}
+
+.omichan .florist-box__image {
+  background-image: url(images/florist_omichan.png);
+}
+
+.florist-box__name {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+@media (max-width: 675px) {
+  .florist-box__name {
+    margin-left: 4%;
+  }
+}
+
+.florist-box__text {
+  line-height: 1.75;
+}
+
+@media (max-width: 675px) {
+  .florist-box__text {
+    padding: 0 4%;
+    font-size: 0.9em;
+  }
+}
+
+.info {
+  padding: 80px 0;
+}
+
+.info .inner {
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 675px) {
+  .info .inner {
+    margin-bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.info-image {
+  padding-top: 32%;
+  width: calc((100% - 48px) / 2);
+  background: url(images/shop_information.png) no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 675px) {
+  .info-image {
+    padding-top: 60%;
+    width: 100%;
+  }
+}
+
+.info-table {
+  padding: 32px;
+  width: calc((100% - 48px) / 2);
+}
+
+@media (max-width: 675px) {
+  .info-table {
+    padding: 30px 4% 0;
+    width: 100%;
+    font-size: 0.8em;
+  }
+}
+
+.info-table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.info-table tr:last-child {
+  margin-bottom: 0;
+}
+
+.info-table th {
+  padding-right: 16px;
+  width: 25%;
+  border-right: 2px solid #a0a0a0;
+  text-align: left;
+}
+
+.info-table td {
+  padding-left: 16px;
+  width: 75%;
+  letter-spacing: 0.05em;
+}
+
+.contact {
+  padding: 80px 0;
+  background: url(images/contact_us.png) no-repeat;
+  background-size: cover;
+}
+
+.contact button {
+  margin: 40px auto;
+  display: block;
+  width: 360px;
+  height: 80px;
+  background: #fff;
+  border: 1px solid #a0a0a0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #2b2b2b;
+  font-size: 20px;
+  line-height: 80px;
+  text-align: center;
+}
+
+@media (max-width: 675px) {
+  .contact button {
+    width: 280px;
+    font-size: 1em;
+  }
+}
+
+.contact button i {
+  margin-right: 24px;
+  color: #707070;
+}
+
+.copy {
+  text-align: center;
+}
+
+@media (max-width: 675px) {
+  .copy {
+    font-size: 0.7em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
